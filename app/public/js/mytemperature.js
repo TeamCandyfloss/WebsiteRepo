@@ -5,7 +5,7 @@ $(function() {
     $.ajax({
         type : 'GET',
         dataType: 'jsonp',
-        url: 'http://localhost:57019/Service1.svc/Temperatures/',
+        url: 'http://pleaseworknow.azurewebsites.net/service1.svc/temperatures/',
         success: showTemperatures
         });
 
