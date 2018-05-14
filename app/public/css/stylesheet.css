@@ -1,0 +1,26 @@
+#wrapper {
+     width: 90%;
+     margin: 0 auto;
+ }
+
+ #temperature_box {
+   width: 20%;
+   height: 50%;
+   background: linear-gradient(45deg, cyan, navy);
+ }
+
+ #temperature_box h2 {
+   color:white;
+   -webkit-text-stroke: 1px black;
+ }
+
+ #temperature_box h3 {
+   color:white;
+   -webkit-text-stroke: 1px black;
+ }
+
+ .temperatures {
+   color:white;
+   -webkit-text-stroke: 1px black;
+   background: linear-gradient(45deg, cyan, navy);
+ }

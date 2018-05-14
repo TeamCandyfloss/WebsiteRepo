@@ -1,0 +1,22 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "Template for creating websites with node.",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "nodemon -e css, ejs, js, json --watch app"
+  },
+  "author": "Gruppe 3",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "reload": "^2.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TeamCandyfloss/WebsiteRepo"
+  }
+}
