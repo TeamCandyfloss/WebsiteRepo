@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <% include partials/template/head.ejs %>
+
+  <body>
+    <div id="wrapper">
+        <header><% include partials/template/navbar.ejs %></header>
+
+        <form>
+          <input id="targetTemp" type="text">
+          <input type="submit" value="Set Alarm">
+        </form>
+
+        <% include partials/content/alarm.ejs %>
+
+    </div>
+  </body>
+</html>

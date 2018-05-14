@@ -1,7 +1,7 @@
 $(function() {
 
     var output = '';
-    var x = 0;
+
     $.ajax({
         type : 'GET',
         dataType: 'jsonp',
@@ -10,13 +10,11 @@ $(function() {
         });
 
         function showTemperature(data) {
-          while(true)
-          {
-            output += data.Temperature;
-            x = document.getElementById("targetTemp");
-
-            $('.targetTemp').html(x);
-          }
-
+     output += '<h1>Current Temperature</h1>';
+     output += '<h1>' + data.Place + '</h1>';
+     output += '<h3>' + data.Temperature + '</h3>';
+     output += '<h3>' + data.Time + '</h3>';
+     currentTemp = data.Temperature;
+    $('.currentTemperature').html(output);
 }
 });
