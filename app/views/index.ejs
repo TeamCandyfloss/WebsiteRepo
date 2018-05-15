@@ -5,7 +5,17 @@
     <div id="wrapper">
       <% include partials/template/navbar.ejs %>
     </br>
-      <% include partials/content/currenttemperature.ejs %>
-    </div>
+
+    <script  src="js/currentMeasurement.js"></script>
+
+    <form>
+        
+        Celsius <input type="radio" name="temperature" checked onclick="celsius()">
+        Fahrenheit <input type="radio" name="temperature" onclick="fahrenheit()">
+        Kelvin <input type="radio" name="temperature" onclick="kelvin()">
+
+    </form>
+    <div class="currentTemperature">
+      </div>
   </body>
 </html>
