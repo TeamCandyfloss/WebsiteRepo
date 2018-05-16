@@ -1,8 +1,12 @@
+function tempByDate(){
 $(function() {
 
     var output = '';
 
-    var date = $('#datepicker').text();
+    var date = $('.datepicker').text();
+
+    date.replace("/", "-");
+    date.replace("/", "-");
 
     $.ajax({
         type : 'GET',
@@ -16,8 +20,10 @@ $(function() {
     $.each(data,function(key, item) {
           output += '<h1> ' + item.Place +'  </h1>';
           output += '<h3> ' + item.Temperature + '°' + '</h3>';
+          output += '<h3> ' + item.Date + '</h3>';
 
     });
     $('.temperatures').html(output);
 }
 });
+}
