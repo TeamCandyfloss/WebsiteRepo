@@ -13,11 +13,17 @@ $(function() {
         });
 
         function showTemperatures(data) {
-     output += '<h1>Specific Temperatures</h1>';
+     output += '<tr>';
+     output += '<th> Location </th>';
+     output += '<th> Temperatur </th>';
+     output += '<th> Klokkeslæt </th>';
+     output += '</tr>';
     $.each(data,function(key, item) {
-          output += '<h1> ' + item.Place +'  </h1>';
-          output += '<h3> ' + item.Temperature + '°' + '</h3>';
-          output += '<h3> ' + item.Date + '</h3>';
+        output += '<tr>';
+        output += '<td> '+ item.Place +' </td>';
+        output += '<td> '+ item.Temperature +' </td>';
+        output += '<td> '+ item.Time +' </td>';
+        output += '</tr>';
 
     });
     $('.temperatures').html(output);
