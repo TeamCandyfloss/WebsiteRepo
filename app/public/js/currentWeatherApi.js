@@ -1,4 +1,4 @@
-setTimeout(currentWeather, 1000);
+setTimeout(currentWeather, 300);
 
 function currentWeather() {
   $(function() {

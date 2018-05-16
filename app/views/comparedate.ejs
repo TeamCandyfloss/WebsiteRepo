@@ -3,50 +3,29 @@
 
 <head>
   <% include partials/template/head.ejs %>
+  <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body id="<%= pageID %>">
   <div id="wrapper">
     <% include partials/template/navbar.ejs %>
-      <script src="js/currentMeasurement.js"></script>
+      <script src="js/specificTemperatures.js"></script>
       <br>
       <br>
       <div class="container">
         <div class="row">
           <div class="col">
-            <div class="currentTemperature">
+            <div class="temperatures">
             </div>
           </div>
           <div class="col">
-
-            select which date you want to compare with.
-            <title>Bootstrap datepicket demo</title>
-            <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-            <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-            <script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
-
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
-            <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
-            <script type='text/javascript'>
-              $(function () {
-                $('.input-group.date').datepicker({
-                  calendarWeeks: true,
-                  todayHighlight: true,
-                  autoclose: true
-                });
-              });
-
-            </script>
-            </head>
-
-            <body>
-                <div class="input-group date">
-                  <input type="text" class="form-control">
-                  <span class="input-group-addon">
-                    <i class="glyphicon glyphicon-calendar"></i>
-                  </span>
-                </div>
-            </body>
+            <input id="datepicker" width="276" />
+              <script>
+                  $('#datepicker').datepicker({
+                      uiLibrary: 'bootstrap4'
+                  });
+              </script>
           </div>
         </div>
 
