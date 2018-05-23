@@ -4,7 +4,7 @@ var router = express.Router();
 router.get('/comparedate', function(req, res) {
 
   res.render('comparedate', {
-    pageTitle: 'CompareDate',
+    pageTitle: 'Compare Date',
     pageID: 'comparedate'
   });
 

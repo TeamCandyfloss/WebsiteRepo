@@ -15,6 +15,7 @@ app.use(express.static('app/public'));
 app.use(require('./routes/index'));
 app.use(require('./routes/alarms'));
 app.use(require('./routes/weatherAPI'));
+app.use(require('./routes/forecast'));
 app.use(require('./routes/compare'));
 app.use(require('./routes/comparedate'));
 
