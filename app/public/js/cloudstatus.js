@@ -3,6 +3,7 @@ $(function() {
     var icon = '';
     var description = '';
     var city = '';
+    var windInfo = '';
     $.ajax({
         type : 'GET',
         dataType: 'jsonp',
@@ -20,8 +21,9 @@ $(function() {
           city += JSON.stringify(data.name);
           city = city.replace("\"","");
           city = city.replace("\"","");
+          windInfo = data.wind.speed + ' m/s';
           $('.weatherIcon').html('<img src=http://openweathermap.org/img/w/' + icon + '.png>')
-          $('.currentAPI').html(description + '</br>' + city);
+          $('.currentAPI').html('<h3>' + description + '</h3>' + '<h3>' + city + '</h3>' + '<h3>' + windInfo + '</h3>');
 
     }
 });

@@ -22,6 +22,7 @@ function currentWeather() {
             temperature += JSON.stringify(Math.round(data.main.temp-273.15));
             temperature = temperature.replace("\"","");
             temperature = temperature.replace("\"","");
+            
             $('.currentAPI').html('<h1> Current API Temperature </h1>' +  '<br><h3>' + city + '</h3><h3>' + temperature + '</h3><h3>' + currentTime.getHours() + ':' + currentTime.getMinutes() + '</h3>');
 
       }
