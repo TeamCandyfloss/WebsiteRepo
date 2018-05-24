@@ -19,6 +19,8 @@ app.use(require('./routes/forecast'));
 app.use(require('./routes/compare'));
 app.use(require('./routes/comparedate'));
 app.use(require('./routes/search'));
+app.use(require('./routes/delete'));
+
 
 var server = app.listen(app.get('port'), function(){
     console.log('Lytter på Port ' + app.get('port'));
