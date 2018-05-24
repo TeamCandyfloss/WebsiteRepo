@@ -18,9 +18,19 @@
    color:white;
    -webkit-text-stroke: 1px black;
  }
+ 
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
- .temperatures {
-   color:white;
-   -webkit-text-stroke: 1px black;
-   background: linear-gradient(45deg, cyan, navy);
- }
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

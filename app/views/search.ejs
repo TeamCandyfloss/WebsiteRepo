@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include partials/template/head.ejs %>
+  <script src="js/search.js"></script>
+</head>
+
+<body id="<%= pageID %>">
+  <div id="wrapper">
+    <% include partials/template/navbar.ejs %>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <h1>Search</h1>
+            <form>
+              <label>Country: </label>
+                <select id="country" name="country">
+                    <option value="dk">Denmark</option>
+                    <option value="no">Norway</option>
+                    <option value="se">Sweden</option>
+                    <option value="de">Germany</option>
+                  </select>
+                  <br>
+                  <label>City:</label>
+              <input id="location" type="text" placeholder="ex: Roskilde">
+              <input type="button" value="Search" onclick="currentWeather()">
+
+            </form>
+          </div>
+          <div class="col-sm">
+            <h1>Result</h1>
+            <div id="currentWeather">
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+
+</html>
