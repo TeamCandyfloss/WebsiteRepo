@@ -38,18 +38,19 @@ $(function () {
     };
 
     $(document).on("click", '.feedback-delete', function (e) {
-        var deleteurl = 'http://pleaseworknow.azurewebsites.net/service1.svc/temperatures/' + e.target.id;
-
+        var deleteurl = 'http://pleaseworknow.azurewebsites.net/service1.svc/temperatures/';
+        var deleteData = {'ID':e.target.id};
         $.ajax({
             type: 'delete',
             url: deleteurl,
-            success: updatemeasurment,
-            dataType: 'jsonp',
-            crossDomain: true
+            dataType: 'json',
+            contentType: 'application/json',
+            data: JSON.stringify(deleteData),
+            success: updatemeasurment
         });
 
         function updatemeasurment(data) {
-            // window.location.reload();
+            window.location.reload();
 
 
         };
