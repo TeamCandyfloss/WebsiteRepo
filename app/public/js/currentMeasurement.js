@@ -55,7 +55,7 @@ function kelvin(){
 
             function showTemperature(data) {
          output += '<h1>Current Temperature</h1>';
-         output += '<h1>' + data.Place + '</h1>';
+         output += '<h1 id="#place">' + data.Place + '</h1>';
          output += '<h3>' + (data.Temperature+273.15) + '</h3>';
          output += '<h3>' + data.Time + '</h3>';
         $('.currentTemperature').html(output);

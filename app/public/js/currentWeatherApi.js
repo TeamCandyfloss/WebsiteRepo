@@ -1,4 +1,4 @@
-setTimeout(currentWeather, 400);
+setTimeout(currentWeather, 1000);
 
 function currentWeather() {
   $(function() {
@@ -6,20 +6,19 @@ function currentWeather() {
       var currentTime = new Date();
       var city = '';
       var temperature = '';
-      var place = $('#place').text();
-
+      var place = $('#place').val();
+      var apiUrl = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=Roskilde,dk&mode=json&APPID=78101fe068bd64da9b6810e36dbed436';
+      
       $.ajax({
           type : 'GET',
           dataType: 'jsonp',
-          url: 'http://api.openweathermap.org/data/2.5/weather?q=' + place + ',DK&APPID=78101fe068bd64da9b6810e36dbed436',
+          url: apiUrl,
           success: showTemperature
           });
 
           function showTemperature(data) {
-            city += JSON.stringify(data.name);
-            city = city.replace("\"","");
-            city = city.replace("\"","");
-            temperature += JSON.stringify(Math.round(data.main.temp-273.15));
+            city += data.city.name;
+            temperature += JSON.stringify(Math.round(data.list[0].temp.day-273.15));
             temperature = temperature.replace("\"","");
             temperature = temperature.replace("\"","");
             
